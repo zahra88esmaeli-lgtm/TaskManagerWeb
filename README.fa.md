@@ -42,7 +42,7 @@ dotnet run
 <div dir="rtl">
 
 ## مخزن مرتبط
--- TaskManager API: [TaskManagerApi](https://github.com/YOUR-USERNAME/TaskManagerApi)
+-- TaskManager API: [TaskManagerApi] (https://github.com/zahra88esmaeli-lgtm/TaskManagerAPI.git)
 
 ## سازنده
 Niki

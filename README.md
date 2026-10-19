@@ -27,7 +27,7 @@ It communicates with a separate REST API (TaskManager API) using JWT authenticat
        dotnet run
 
 ## Related Repository
-- - TaskManager API: [TaskManagerApi](https://github.com/YOUR-USERNAME/TaskManagerApi)
+- - TaskManager API:[TaskManagerApi] (https://github.com/zahra88esmaeli-lgtm/TaskManagerAPI.git)
 
 ## Author
 Niki

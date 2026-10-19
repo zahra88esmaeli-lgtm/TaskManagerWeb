@@ -1,0 +1,27 @@
+﻿@model TaskManagerWeb.Models.Dto.TaskItemDto
+
+<h2>New Task</h2>
+<form asp-action="Delete" method="post">
+    <input type="Hidden" asp-for=Id>
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="mb-3">
+        <label asp-for="Title"></label>
+        <input asp-for="Title" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Description"></label>
+        <input asp-for="Description" class="form-control" />
+    </div>
+    <div class="form-check mb-3">
+        <label asp-for="IsDone" class="form-check-label">Done</label>
+        <input asp-for="IsDone" class="form-check-input" />
+
+    </div>
+    <td>
+        <form asp-action="Delete" asp-route-id="Id" method="post"
+              onsubmit="return confirm('Delete this task?');">
+            <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+        </form>
+    </td>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

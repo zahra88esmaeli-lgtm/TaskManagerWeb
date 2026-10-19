@@ -1,0 +1,42 @@
+﻿@model List<TaskManagerWeb.Models.Dto.TaskItemDto>
+
+<h2>My Tasks</h2>
+   <a asp-controller="Tasks" asp-action="Create" class="btn btn-sm btn-primary">New Task</a>
+
+@if (!Model.Any())
+{
+    <p>You have no tasks yet.</p>
+}
+else
+{
+   
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Done</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var task in Model)
+            {
+                <tr>
+                    <td>@task.Title</td>
+                    <td>@task.Description</td>
+                    <td>@(task.IsDone ? "Yes" : "No")</td>
+                    <td><a asp-action="Edit" asp-route-id="@task.Id" class="btn btn-sm btn-primary">Edit</a></td>
+                    <td>
+                        <form asp-action="Delete" asp-route-id="@task.Id" method="post"
+                              onsubmit="return confirm('Delete this task?');">
+                            <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    
+}

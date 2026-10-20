@@ -20,24 +20,25 @@
 - Bootstrap
 
 ## نحوه‌ی اجرا
-1. اول پروژه‌ی TaskManager API را دریافت و اجرا کنید.
-2. آدرس API را در `appsettings.json` تنظیم کنید:
 
-</div>
+**پیش‌نیازها:** .NET 10 SDK و [TaskManagerAPI](https://github.com/zahra88esmaeli-lgtm/TaskManagerAPI) که **باید اول اجرا شود**.
+
+```
+git clone https://github.com/zahra88esmaeli-lgtm/TaskManagerWeb.git
+cd TaskManagerWeb/TaskManager
+```
+
+در `appsettings.json` مقدار `ApiSettings:BaseUrl` را برابر **آدرس API** بگذار (نه آدرس خود Web):
 
 ```json
-"ApiSettings": { "BaseUrl": "https://localhost:7244/" }
+"ApiSettings": { "BaseUrl": "http://localhost:5280" }
 ```
 
-<div dir="rtl">
-
-3. سپس این پروژه را اجرا کنید:
-
-</div>
-
-```bash
+```
 dotnet run
 ```
+
+سپس آدرسی که در خروجی چاپ می‌شود (مثلاً `http://localhost:5217`) را در مرورگر باز کن.
 
 <div dir="rtl">
 

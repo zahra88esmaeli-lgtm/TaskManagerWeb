@@ -17,15 +17,26 @@ It communicates with a separate REST API (TaskManager API) using JWT authenticat
 - Bootstrap
 
 ## How to Run
-1. Clone and run the TaskManager API first.
-2. Set the API address in `appsettings.json` (use the key name from your project):
+## How to run
 
-       "ApiSettings": { "BaseUrl": "https://localhost:7244/" }
+**Requirements:** .NET 10 SDK and [TaskManagerAPI](https://github.com/zahra88esmaeli-lgtm/TaskManagerAPI), which **must be running first**.
 
-3. Run this project:
+```
+git clone https://github.com/zahra88esmaeli-lgtm/TaskManagerWeb.git
+cd TaskManagerWeb/TaskManager
+```
 
-       dotnet run
+In `appsettings.json`, set `ApiSettings:BaseUrl` to the **API address** (not the Web's own address):
 
+```json
+"ApiSettings": { "BaseUrl": "http://localhost:5280" }
+```
+
+```
+dotnet run
+```
+
+Then open the address printed in the output (for example `http://localhost:5217`) in your browser.
 ## Related Repository
 - - TaskManager API:[TaskManagerApi] (https://github.com/zahra88esmaeli-lgtm/TaskManagerAPI.git)
 
